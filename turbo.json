@@ -42,7 +42,12 @@
       "cache": false
     },
     "build": {
-      "dependsOn": ["^build", "^db-generate"],
+      "dependsOn": [
+        "^build",
+        "^db-generate",
+        "$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+        "$CLERK_SECRET_KEY"
+      ],
       "outputs": [".next/**", ".expo/**"]
     },
     "lint": {
