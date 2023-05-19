@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.17.1",
-    "@trpc/client": "^10.25.0",
-    "@trpc/server": "^10.25.0",
+    "@trpc/client": "^10.27.0",
+    "@trpc/server": "^10.27.0",
     "@yu/prisma": "0.1.0",
     "@yu/validators": "0.1.0",
     "superjson": "^1.12.3",
