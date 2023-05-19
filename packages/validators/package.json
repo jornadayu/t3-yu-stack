@@ -1,0 +1,16 @@
+{
+  "name": "@yu/validators",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "devDependencies": {
+    "@yu/eslint-config": "0.1.0",
+    "eslint": "^8.40.0"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules"
+  },
+  "dependencies": {
+    "zod": "^3.21.4"
+  }
+}

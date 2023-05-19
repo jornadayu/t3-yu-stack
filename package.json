@@ -1,0 +1,35 @@
+{
+  "name": "t3-turbo-and-clerk",
+  "private": true,
+  "packageManager": "pnpm@7.13.0",
+  "scripts": {
+    "build": "turbo build",
+    "clean": "rm -rf node_modules",
+    "clean:workspaces": "turbo clean",
+    "db-push": "turbo db-push && turbo db-generate",
+    "db-studio": "turbo db-studio",
+    "db-up": "turbo db-up",
+    "db-nuke": "turbo db-nuke",
+    "db-reset": "turbo db-reset",
+    "db-setup": "turbo db-setup",
+    "db-test-setup": "turbo db-test-setup",
+    "db-test-nuke": "turbo db-test-nuke",
+    "dev": "turbo dev --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md,js,mjs}\"",
+    "lint": "turbo lint",
+    "test": "turbo db-test-setup && turbo test && turbo db-test-nuke",
+    "FIXME:lint": "turbo lint && manypkg check",
+    "type-check": "turbo type-check"
+  },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
+    "@manypkg/cli": "^0.20.0",
+    "@types/prettier": "^2.7.2",
+    "@yu/eslint-config": "0.1.0",
+    "eslint": "^8.40.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8",
+    "turbo": "^1.9.3",
+    "typescript": "^5.0.4"
+  }
+}

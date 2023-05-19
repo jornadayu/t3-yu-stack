@@ -1,0 +1,12 @@
+{
+  "name": "@yu/dayjs",
+  "description": "",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "dayjs": "1.11.2"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules"
+  }
+}

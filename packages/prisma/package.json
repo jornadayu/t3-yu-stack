@@ -1,0 +1,34 @@
+{
+  "name": "@yu/prisma",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "prisma": {
+    "seed": "ts-node --transpile-only prisma/seed.mjs"
+  },
+  "scripts": {
+    "with-test-env": "dotenv -e .env.test -- ",
+    "clean": "rm -rf .turbo node_modules",
+    "db-push": "pnpm prisma db push",
+    "db-generate": "pnpm prisma generate",
+    "db-nuke": "docker compose down --volumes --remove-orphans || docker-compose down --volumes --remove-orphans",
+    "db-test-nuke": "docker compose rm -v -s -f db_test || docker-compose rm -v -s -f db_test",
+    "db-reset": "pnpm db-nuke && pnpm db-setup",
+    "db-seed": "pnpm prisma db seed",
+    "db-setup": "pnpm db-up && pnpm db-push && pnpm db-generate && pnpm db-seed",
+    "db-test-setup": "pnpm with-test-env pnpm db-test-up && pnpm with-test-env pnpm db-push && pnpm with-test-env pnpm db-seed",
+    "db-studio": "pnpm prisma studio",
+    "db-up": "docker compose up db -d || docker-compose up db -d",
+    "db-test-up": "docker compose up db_test -d || docker-compose up db_test -d"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.0",
+    "dotenv-cli": "^7.2.1",
+    "prisma": "^4.13.0",
+    "ts-node": "^10.9.1"
+  }
+}
