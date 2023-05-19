@@ -16,10 +16,6 @@ db.sqlite-journal
 .next/
 out/
 
-# expo
-.expo/
-dist/
-
 # production
 build
 
@@ -41,7 +37,6 @@ yarn-error.log*
 !packages/prisma/.env.test
 !packages/api/.env
 !packages/api/.env.test
-!apps/expo/.env
 !apps/nextjs/.env
 
 # vercel
