@@ -14,8 +14,6 @@ env:
 
 jobs:
   build-lint:
-    env:
-      DATABASE_URL: file:./db.sqlite
     runs-on: ubuntu-latest
 
     steps:
@@ -57,3 +55,6 @@ jobs:
 
       - name: Check workspaces
         run: pnpm manypkg check
+
+      - name: Unit Tests
+        run: DATABASE_URL="postgresql://prisma:prisma@localhost:5451/tests" pnpm test
