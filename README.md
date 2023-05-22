@@ -64,6 +64,20 @@ cp .env.test.example .env.test
 pnpm db-setup
 ```
 
+### Development
+
+**To run:**
+
+```
+pnpm dev
+```
+
+**To run unit tests:**
+
+```
+pnpm test
+```
+
 ## Deployment
 
 ### Next.js
