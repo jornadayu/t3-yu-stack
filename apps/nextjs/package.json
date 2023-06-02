@@ -28,7 +28,7 @@
     "@yu/dayjs": "^0.1.0",
     "@yu/prisma": "0.1.0",
     "@yu/validators": "0.1.0",
-    "lucide-react": "^0.211.0",
+    "lucide-react": "^0.216.0",
     "next": "^13.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
